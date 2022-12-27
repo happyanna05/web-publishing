@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/default.css">
-<title>웹퍼블리싱</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/default.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <!-- safari, chrome 등의 브라우저 중에
+일부 브라우저는 "shortcut icon"에서 실행되고,
+또 다른 브라우저는 "icon"에서 실행됩니다.
+"shortcut icon"과 "icon" 둘 중 하나만 있어도 가능한 브라우저도 있습니다.-->
+  <title>웹퍼블리싱</title>
 </head>
+
 <body>
   <div id="wrap">
     <header id="header">
       <ul>
-        <li>
+        <li class="on">
           웹개발 이해
         </li>
         <li>
@@ -23,23 +36,69 @@
         <li>
           jQuery
         </li>
+        <li>
+          예제문제
+        </li>
       </ul>
     </header>
     <div id="container">
       <section>
-        <h2>웹이란?</h2>
-        <h3>1.웹의 개념</h3>
+        <!-- <ol>
+          <li>웹 서비스의 이해</li>
+          <li>HTML5 정의</li>
+          <li>HTML 기본 구조</li>
+          <li>HTML 태그</li>
+        </ol> -->
+        <h2>웹의 개념</h2>
         <p>
-          World Wide Web, WWW, W3라는 용어로 쓰임
+          World Wide Web, WWW, W3라는 용어로 쓰임.
+          인터넷에 연결된 컴퓨터들을 통해 사람들이
+          정보를 공유할 수 있는 전 세계적인 정보 공간
         </p>
-        <p>
-          웹은 인터넷에 연결된 컴퓨터들을 통해 사람들이
-정보를 공유할 수 있는 전 세계적인 정보 공간
-= 간단히 웹(Web)이라고 함
-        </p>
-        <h3>2.웹의 특징</h3>
       </section>
-      <h2>웹 서비스의 이해</h2>
+      <section>
+        <h2>웹 서비스의 이해</h2>
+        <p>
+          웹의 동작 과정은 서버(server)와 클라이언트(client)로 나눌 수 있다.
+          서버는 정보를 제공해 주는 쪽이고 클라이언트는 정보를 요청하는 쪽으로
+          웹사이트는 정보를 검색하거나 처리하는 일을 서버에서 하고 사용자의 요청을 받아 처리한 결과를
+          클라이언트에게 보여준다. 즉 클라이언트는 사용자와 서버 사이에서 화면으로 보여주는 역할을 함.
+          예) 로그인 하는 과정
+        </p>
+      </section>
+      <section>
+        <h2>웹 개발</h2>
+        <p>
+        웹개발이란, 인터넷이나 인트라넷을 위한 웹사이트를 개발하는 일을 가리킨다.
+  
+        웹 개발은 가장 단순한 단일 정적 문서의 플레인 텍스트에서부터 가장 복잡한 웹 기반 인터넷 애플리케이션, 전자 비즈니스, 소셜 네트워크 서비스에 이르기까지 개발 범위가 다양하다.
+      *인트라넷:조직 내부의 업무를 통합하는 정보 시스템</p>
+        <table>
+          <tr>
+            <td>프론트엔드 개발</td>
+            <td>백엔드 개발</td>
+          </tr>
+          <tr>
+            <td>사용자 앞에 보이는 영역, 웹 브라우저 화면에 보이는 것을 다룸.</td>
+            <td>사용자 뒤에 보이지 않는 영역. 웹 사이트의 회원 정보나 게시판 글 등 서버에 데이터베이스의 형태로 저장된 것을 설계하거나 처리하는 것을 다룸 </td>
+          </tr>
+          <tr>
+            <td>HTML, CSS, 자바스크립트</td>
+            <td>자바, PHP, 파이썬 등</td>
+          </tr>
+        </table>
+        <p>
+          <img src="/img/img1.png" alt="웹 개발 한눈에 보기">
+        </p>
+      </section>
+<section>
+  <h2>웹 브라우저</h2>
+      <ul>
+        <li></li>
+      </ul>
+</section>
+      <section>
+        <h2>웹 서비스 용어</h2>
       <table>
         <tbody>
           <tr>
@@ -51,20 +110,16 @@
             </td>
           </tr>
           <tr>
-            <th>웹
-            </th>
-            <td>
-              인터넷 공간에서 제공하는 서비스
-            </td>
-          </tr>
-          <tr>
             <th>
               웹서버
             </th>
             <td>
-             하드웨어, 소프트웨어 혹은 두 개가 같이 동작하는 것을 의미할 수 있습니다.
-             1.하드웨어 측면에서, web server는 web server의 소프트웨어와 website의 컴포넌트 파일들을 저장하는 컴퓨터입니다. (컴포넌트 파일에는 HTML 문서, images, CSS stylesheets, 그리고 JavaScript files가 있습니다.) Web server는 인터넷에 연결되어 웹에 연결된 다른 기기들이 웹 서버의 데이터(컴포넌트 파일들)를 주고받을 수 있도록 합니다.
-             2.소프트웨어 측면에서, web server는 기본적으로 웹 사용자가 어떻게 호스트 파일들에 접근하는지를 관리합니다. 이 문서에서 web server는 HTTP서버로 국한합니다. HTTP 서버는 URL(Web addresses)과 HTTP(당신의 브라우저가 웹 페이지를 보여주기 위해 사용하는 프로토콜)의 소프트웨어 일부입니다.
+              하드웨어, 소프트웨어 혹은 두 개가 같이 동작하는 것을 의미할 수 있습니다.
+              1.하드웨어 측면에서, web server는 web server의 소프트웨어와 website의 컴포넌트 파일들을 저장하는 컴퓨터입니다. (컴포넌트 파일에는 HTML 문서, images,
+              CSS stylesheets, 그리고 JavaScript files가 있습니다.) Web server는 인터넷에 연결되어 웹에 연결된 다른 기기들이 웹 서버의 데이터(컴포넌트 파일들)를
+              주고받을 수 있도록 합니다.
+              2.소프트웨어 측면에서, web server는 기본적으로 웹 사용자가 어떻게 호스트 파일들에 접근하는지를 관리합니다. 이 문서에서 web server는 HTTP서버로 국한합니다. HTTP
+              서버는 URL(Web addresses)과 HTTP(당신의 브라우저가 웹 페이지를 보여주기 위해 사용하는 프로토콜)의 소프트웨어 일부입니다.
             </td>
           </tr>
           <tr>
@@ -85,7 +140,7 @@
           </tr>
           <tr>
             <th>
-             네임서버
+              네임서버
             </th>
             <td>
               도메인 주소를 실제 IP주소로 연결하여 주는 시스템, 네임서버에 도메인을 등록하여 IP주소로 이동할 수 있다.
@@ -93,7 +148,7 @@
           </tr>
           <tr>
             <th>
-             트래픽
+              트래픽
             </th>
             <td>
               웹에서 다운받을 수 있는 정보제공량을 말하며, 정보의 양이 많을 수록 트래픽의 용량도 많이 필요하다.
@@ -101,44 +156,28 @@
           </tr>
           <tr>
             <th>
-             데이터베이스
+              데이터베이스
             </th>
             <td>
-             웹사이트의 게시판이나 갤러리에 업로드 되는 정보들을 저장하는 곳
+              웹사이트의 게시판이나 갤러리에 업로드 되는 정보들을 저장하는 곳
             </td>
           </tr>
           <tr>
             <th>
-             FTP
+              FTP
             </th>
             <td>
-             인터넷을 통한 파일송수신 서비스 프로토콜
+              인터넷을 통한 파일송수신 서비스 프로토콜
             </td>
           </tr>
         </tbody>
       </table>
-      <p>
-        -인터넷은 
--웹은 인터넷 공간에서 제공하는 서비스
-<h2>웹개발이란?</h2>
-        웹개발이란, 인터넷이나 인트라넷을 위한 웹사이트를 개발하는 일을 가리킨다.
-
-웹 개발은 가장 단순한 단일 정적 문서의 플레인 텍스트에서부터 가장 복잡한 웹 기반 인터넷 애플리케이션, 전자 비즈니스, 소셜 네트워크 서비스에 이르기까지 개발 범위가 다양하다.</p>
+      </section>
+      
+      
     </div>
-  </div>
-  <script>
-    document.write("<h2>여러분을 환영합니다.</h2>");
-    confirm("취소하시겠습니까?")
-    var name= prompt("이름을 입력하세요.");
-    document.write(name + "님 환영합니다.")
-    console.log(name+"님 환영합니다." )
-    var currentYear = 2022;
-    var birthYear;
-    var age;
-    birthYear = prompt("태어난 년도를 입력하세요.");
-    age = currentYear - birthYear + 1;
-    document.write(currentYear + "년 현재" + birthYear + "년에 태어난 사람의 나이는" + age + "세 입니다.")
 
-  </script>
+  </div>
 </body>
+
 </html>
