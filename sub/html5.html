@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="../img/img_og.jpg">
+  <meta property="og:title" content="JUHA_edu">
+  <meta property="og:description" content="웹퍼블리싱 공부하기">
+  <title>웹퍼블리싱</title>
+  <link rel="stylesheet" href="../css/default.css">
+  <link rel="icon" href="../img/favicon.png" type="./img/png">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <!-- safari, chrome 등의 브라우저 중에
+일부 브라우저는 "shortcut icon"에서 실행되고,
+또 다른 브라우저는 "icon"에서 실행됩니다.
+"shortcut icon"과 "icon" 둘 중 하나만 있어도 가능한 브라우저도 있음.-->
+  <script src="../js/jquery-3.6.3.min.js"></script>
+  <script src="../js/jquery.easeScroll.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="logo">
+        JUHA, HTML5 + CSS3 Web Standards
+      </div>
+      <ul class="nav">
+        <li>
+          <a href="../index.html">웹개발 이해</a>
+        </li>
+        <li class="on">
+          <a href="./sub01.html">HTML5</a>
+        </li>
+        <li>
+          <a href="./sub02.html">CSS3</a>
+        </li>
+        <!--<li>
+          <a href="./sub03.html">jQuery</a>
+        </li>
+        <li>
+          <a href="./sub04.html">예제문제</a>
+        </li> -->
+      </ul>
+    </header>
+    <div id="container">
+      <ol class="tab_menu">
+        <li class="active" data-title="sub01_con1">HTML5</li>
+        <li data-title="sub01_con2">HTML 기본 구조</li>
+        <li data-title="sub01_con3">HTML 태그</li>
+      </ol>
+      <div id="sub01_con1" class="sub01_con" style="display: block;">
+        <section>
+          <h2>[HTML 정의]</h2>
+          <p>
+            HTML은 <u>하이퍼텍스트 마크업 랭귀지(HyperText Markup Language)</u>의 줄임말로 하이퍼텍스트를 마크업 하는 언어이다. 하이퍼 텍스트는 현재 웹 페이지에서 다른 웹
+            페이지로
+            이동할 수 있는 텍스트의 기능을 말하고 '마크업'이란 태그(tag)를 사용해 어느 영역이 제목, 본문, 이미지 인지를 표시하는 것을 말한다.
+          </p>
+        </section>
+        <section>
+          <h2>[HTML을 HTML5라고 부르는 이유]</h2>
+          <p>
+            HTML5이전에 사용하던 HTML4에 이어 다양한 기능들이 추가되었기 때문에 '4'다음으로 '5'를 붙여 HTML5로 부른다. 현재는 대부분의 웹 브라우저에서 HTML5를 지원하기 때문에 숫자를
+            빼고 'HTML'이라고 부르기도 한다.
+          </p>
+        </section>
+        <section>
+          <h2>[웹 표준과 웹 접근성]</h2>
+          <div class="define01">
+            <strong>1. 웹 표준</strong>
+            <u>
+              - ‘웹에서 표준적으로 사용되는 기술이나 규칙’을 의미
+            </u>
+            <p>
+              브라우저 종류 및 버전에 따른 기능 차이에 대하여 호환이 가능하도록 제시된 표준으로, 다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 동일하게 구현함과 동시에 어느 한쪽에 최적화되어
+              치우치지 않도록 공통요소를 사용하여 웹 페이지를 제작하는 기법을 의미한다. 웹 표준을 개발하는 국제 컨소시엄인 W3C(World Wide Web Consortium)가 권고한 표준안에 따라
+              웹사이트를 작성할 때 이용하는
+              HTML,
+              CSS, JavaScript 등에 대한 규정을 담고 있으며 <u>웹 표준의 궁극적인 목적은 웹사이트에 접속한 사용자가 어떠한 운영체제나 브라우저를 사용하더라도 동일한 결과를 보이게 하는
+                것이다.</u>
+            </p>
+          </div>
+          <div class="define02">
+            <strong>웹 표준 장점</strong>
+            <ul class="merit">
+              <li class="merit01">
+                <strong>1. 수정 및 운영관리 용이</strong><br>
+                콘텐츠의 올바른 구조화와 CSS로 시각표현을 통일하여 제어하게 되어 페이지 제작의 부담 감소 및 관리용이
+              </li>
+              <li class="merit02">
+                <strong>2. 접근성 향상</strong><br>
+                웹 표준을 이용해 작성한 문서는 다양한 브라우징 환경에 대응이 가능하며 휴대폰, PDA에서도 정상적인 작동 및 장애인 지원용 프로그램에도 도움이 되므로 사용자나 접속 장치의 접근성이 용이
+              </li>
+              <li class="merit03">
+                <strong>3. 검색엔진 최적화(SEO)</strong><br>
+                구조화된 웹페이지는 검색 로봇 수집을 통해 검색엔진에 효율적으로 노출 될 수 있도록 검색엔진의 검색결과를 최적화
+              </li>
+              <li class="merit04">
+                <strong>4. File Size 축소, 서버 저장 공간 절약</strong><br>
+                효율적인 소스 작성은 파일 사이즈와 서버공간을 절약할 수 있으며 동시에 화면표시에 소요되는 시간을 단축
+              </li>
+              <li class="merit05">
+                <strong>5. 효율적인 마크업</strong><br>
+                CSS와 HTML문서를 분리하여 제작할 경우 불필요한 마크업이 최소화되어 페이지 로딩속도 향상
+              </li>
+              <li class="merit06">
+                <strong>6. 호환성 가능</strong><br>
+                기존 IE브라우저에서만 작동이 가능했던 요소들이 웹 표준을 준수함으로써 다양한 브라우저<br>(크롬, 파이어폭스, 사파리, 오페라 등)에서도 작동
+              </li>
+            </ul>
+          </div>
+          <div class="define01">
+            <strong>2. 웹 호환성(Cross Browsing)</strong>
+            <p>
+              <u>웹 호환성은 표준 웹 기술을 사용하여 운영체제, 브라우저 등 어느 한쪽으로 최적화되거나 종속되지 않도록 공통 요소를 사용하여 웹 페이지를 제작하는 기법</u>으로 웹 사이트 사용 시
+              운영체제 및
+              브라우저 간 동일한 결과가 나오도록 의미하는 웹 상호운용성의 개념에 웹 표준의 준수를 포함하는 개념이다.
+            </p>
+
+          </div>
+          <div class="define01">
+            <strong>3. 웹 접근성(Web Accessibility)</strong>
+            <u>
+              장애인, 고령자 등 모든 사용자가 어떠한 기술이나 환경에서도 전문적인 능력 없이 웹사이트에서 제공하는 모든 정보를 동등하게 접근하고 이해할 수 있는 권리를 가르킨다.
+            </u>
+            <p class="define02 mgt14">
+              <strong class="mgb8">웹 접근성을 준수하면?</strong>
+              장애인, 고령자 등을 포함한 모든 사람들이 웹에서 원하는 정보들을 자유롭게 접근 하고 이용할 수 있다.
+              '08년 4월 11일부터 시행된 ‘장애인차별금지 및 권리구제 등에 관한 법률’ 및 동법 시행령 등 관련 규정을 준수할 수 있게 된다. 주변 환경(주변소음, 밝은 태양광, 작은 화면 등)이나,
+              단말기 종류(스마트폰, PC/노트북, 패드)에 상관 없이 사용 가능한 웹을 제공하고 웹 페이지 구성이 논리적으로 최적화되어, 디자인 및 설계의 효율성 제고는 물론 개발/유지보수/개편
+              비용 절감 효과를 가져온다는 장점이 있다.
+            </p>
+            <figure class="img_area">
+              <img src="../img/img4.png" alt="웹 접근성">
+              <figcaption>이미지출처:웹발전연구소</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="define03">
+          <strong>웹 표준, 웹 호환성, 웹 접근성의 이해</strong>
+          <div class="block1">
+            <em><img src="../img/img1.gif" alt="웹 접근성"></em>
+            <span>
+              웹 표준, 웹 호환성, 웹 접근성의 목적은 웹을 사용하는 사용자가 웹사이트를 자유롭고 편리하게 이용하는 점과 장애인, 고령자 등을 포함한 사용자층 확대, 다양한 환경, 새로운 기기에서의
+              이용, 개발 및 운용의 효율성 제고 등의 기대효과가 유사하지만 대상 및 종류 등의 준수 내용과 편의를 제공하는 점에서 차이가 있다. 웹 표준을 준수 하는 것만으로는 웹 접근성이나 웹 호환성이
+              보장되지 않으며 웹 호환성을 준수하더라도 웹 접근성은 보장되지 않는다. 웹 접근성이란 보편적 접근성 확보를 우선시하고, 웹 호환성은 OS, SW에 독립적인 상호운용성 확보를 우선시한다.
+            </span>
+          </div>
+          <table summary="이 표는 웹 표준, 웹 호환성, 웹 접근성 설명표이며 구분, 목적, 준수 내용, 차이의 형태로 이루어져 있습니다." class="tbl_sty2">
+            <caption>웹 표준, 웹 호환성, 웹 접근성 설명표</caption>
+            <colgroup>
+              <col width="20%">
+              <col width="20%">
+              <col width="40%">
+              <col width="20%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">구분</th>
+                <th scope="col">목적</th>
+                <th scope="col">준수 내용</th>
+                <th scope="col" class="last">차이</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">웹 표준<br>(Web Standards)</th>
+                <td>웹의 사용성 및 접근성 보장</td>
+                <td class="txtLeft">
+                  <strong>HTML, CSS 등에 대한 W3C규격(문법) 준수 등</strong><br>
+                  - HTML, CSS, Javascript 등 구조와 표현, 동작 분리 권고
+                </td>
+                <td class="last txtLeft">웹의 내용, 표현, 행동에 관련된 기술표준</td>
+              </tr>
+              <tr>
+                <th scope="row">웹 호환성<br>(Cross Browsing)</th>
+                <td>웹 브라우저 버전,종류와 관계없는<br>웹사이트 접근</td>
+                <td class="txtLeft">
+                  <strong>웹 표준 준수를 통한 브라우저 호환성 확보</strong><br>
+                  - HTML, CSS 문법 준수<br>
+                  - 동작, 레이아웃, 플러그인 호환성
+                </td>
+                <td class="last txtLeft" rowspan="2">웹 표준을 공통으로<br>포함</td>
+              </tr>
+              <tr>
+                <th scope="row">웹 접근성<br>(Web Accessibility)</th>
+                <td>인적, 환경적 요인에 제약없는 웹 정보 접근</td>
+                <td class="txtLeft">
+                  <strong>W3C 웹 접근성 이니셔티브(WAI) 한국형 웹 콘텐츠 접근성 지침2.0</strong><br>
+                  - 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <div id="sub01_con2" class="sub01_con">
+        <section class="define01">
+          <strong>
+            1. HTML 마크업 기초
+          </strong>
+          <table class="tbl_sty2">
+            <tr>
+              <th>
+                태그
+              </th>
+              <td>
+                태그는 시작 태그와 종료 태그로 나눌 수 있으며 "&lt;"와 "&gt;" 로 둘러싸여 있다. <br>기본 형식은 시작 태그의 경우 &lt;tag&gt;의 형태를 가지며, 종료 태그의
+                경우에는 &lt;/tag&gt; 형태를
+                가진다.
+                <div>
+                  <img src="../img/refer1.png" alt="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                요소
+              </th>
+              <td>
+                - 시작 태그와 종료 태그 모두를 포함하여 ‘요소(element)’라고 한다.<br>
+                - 태그는 기본적으로 시작 태그와 종료 태그 2개가 1쌍으로 이루어져 있으며, 태그 사이에 콘텐츠가 작성됨.<br>
+                - 일부 태그의 경우, 종료 태그를 가지지 않는데, 이를 ‘빈 요소(empty element), 빈 요소태그’라고 부른다.
+                <br><br>
+                <p>빈 요소 태그: <span>&lt;</span>br&gt;, <span>&lt;</span>img&gt;,<span>&lt;</span>hr&gt;
+                  ,<span>&lt;</span>input&gt;
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                속성
+              </th>
+              <td>
+                - 속성은 태그에 추가로 정보를 제공하거나 태그의 동작이나 표현을 제어할 수 있는 설정값을 의미한다.<br>
+                - 속성값은 홑따옴표(')와 쌍따옴표(")로 감싸 표현하며 시작태그에 작성한다.<br>
+                - 시작 태그는 필요에 따라 정해진 속성을 가질 수 있으며, 사용할 수 있는 속성은 태그마다 다를 수 있다. <br>
+                - 시작 태그 내에 여러 개의 속성을 선언할 경우 속성과 속성은 공백으로 구분하여 지정해야 한다.<br> 
+                - 속성에는 값을 가지지 않는 논리형 속성도 있다.
+                <span>논리형 속성: 선택 사항이 하나 밖에 없는 속성</span>
+                <div>
+                  <img src="../img/refer2.png" alt="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                콘텐츠(내용)
+              </th>
+              <td>
+                시작 태그와 종료 태그 사이에 작성하여 실제 브라우저 상에서 보여지는 부분
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>
+            2. 태그 작성시 알아야 할 추가 사항
+          </strong>
+          <dl>
+            <div>
+              <dt>1. 태그는 소문자로 작성한다.</dt>
+              <dd>HTML 태그의 이름은 모두 알파벳으로 구성되는데 HTML5는 코드 작성 규칙이 엄격하지 않아 대소문자를 구분하지 않지만 태그를 작성할 때 소문자로 작성하는 것이 널리 사용되는
+                관례이기 때문에 이를 따르는 것을 권장함.</dd>
+            </div>
+            <div>
+              <dt>2. 여는 태그와 닫는 태그를 정확히 입력해야 한다</dt>
+              <dd>여는 태그는 콘텐츠의 시작을, 닫는 태그는 콘텐츠의 끝을 나타낸다. 따라서 시작과 끝을 정확하게 입력하지 않으면 웹페이지의 모습이 의도한 바와 다르게 출력될 수 있다. 여는
+                태그와 닫는 태그의 짝이 맞지 않거나 일부 누락된 경우에도 웹 브라우저는 웹페이지를 렌더링할 수 있으므로 태그 작성 단계에서부터 꼼꼼하게 체크하면서 작성해야 함.</dd>
+            </div>
+            <div>
+              <dt>3. 태그의 콘텐츠로 태그를 포함시킬 수 있다.(태그 중첩)</dt>
+              <dd>여는 태그와 닫는 태그 사이에는 태그가 표시할 콘텐츠가 포함되는데, 이때 또 하나의 새로운 태그가 콘텐츠로써 태그 안에 포함될 수도 있다. <br>
+                &lt;p&gt;&lt;span&gt;태그 안에 태그를 포함하다&lt;/span&gt;&lt;/p&gt; <br>
+                위와 같은 형태에서는 p태그를 <u>상위 태그 또는 부모 태그</u>라 하고 span태그를 <u>하위 태그 또는 자식 태그</u>라고 함.
+              </dd>
+            </div>
+            <div>
+              <dt>4. 들여쓰기를 적절하게 사용하는 것이 좋다</dt>
+              <dd> HTML 소스 코드를 작성할 때는 태그 사이의 포함 관계에 따라 적절한 공백을 두어 표현하는 것을 권장한다. <br>
+                &lt;p&gt;<br>&ensp;&lt;span&gt;태그 안에 태그를 포함하다&lt;/span&gt;<br>&lt;/p&gt; <br>
+                하위 태그의 앞에 적절한 공백, 즉 들여쓰기를 추가하면 태그의 포함 관계가 명확해져 코드의 가독성이 향상된다. 들여쓰기는 주로 키보드의 Tab 키를 눌러 사용한다.
+              </dd>
+            </div>
+            <div>
+              <dt>5. 적절한 주석 사용</dt>
+              <dd>
+                5-1. 주석(comment)은 편집기에서는 보이지만, 웹 브라우저에서는 보이지 않는 코드이다. <br>
+                5-2. 주석은 주로 코드 작성자가 자신이 작성한 코드에 설명 또는 협업하는 작업자에게 남기는
+                메모를 위해 사용한다.
+                5-3. 주석을 작성하는 방법은 <br><br>
+                <img src="../img/etc.png" alt=""><br><br>
+                &lt;!-- 이 안에 쓰인 내용은 웹 브라우저에게 아무런 영향도 주지 못합니다 --&gt; <br> 
+                5-4. 주석의 양이 지나치게 많을 경우에는 오히려 가독성을 저해하는 역효과가 발생할 수
+                있으므로 주석은 코드의 중요한 부분에 한줄 정도씩만 써 주는 것이 좋다.
+              </dd>
+            </div>
+          </dl>
+        </section>
+        <section class="sub_section2 define01">
+          <strong>
+            3. HTML 기본구조
+          </strong>
+          <span class="img_refer">
+            <img src="../img/refer3.jpg" alt="">
+          </span>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th style="width:220px">
+                  DTD 선언
+                </th>
+                <td>
+                  1. 마크업 문서를 작성할 때는 반드시 문서의 첫머리에 문서형 정의(DTD: Document Type Definition)를 선언해야 한다.<br>
+                  2. &lt;!DOCTYPE html&gt; 는 현재 문서가 HTML5 문서임을 명시한다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;html lang="ko"&gt;
+                </th>
+                <td>
+                  1. HTML 문서의 시작을 알리는 루트(root) 요소를 정의.<br>
+                  2. 모든 웹 페이지의 콘텐츠는 &lt;html&gt; 태그와 &lt;/html&gt; 태그 안에 선언되어야 함.<br>
+                  3. 시작 태그인 &lt;html&gt;에 lang 속성을 사용하여 기본 언어를 지정할 수 있다.<br>
+                  *lang: 문서의 주요 언어를 표기하기 위해 추가하는 속성 (한국어: "ko", 영어: "en", 일본어: "ja", 중국어: "zh" 등)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;head&gt;
+                </th>
+                <td>
+                  - 브라우저에게 HTML 문서의 정보(metadata)를 정의.<br>
+                  - 웹 브라우저에는 직접적으로 표현되지 않는 정보 <br> 
+                  - 이러한 정보들은 &lt;title&gt;, &lt;style&gt; , &lt;meta&gt; , &lt;link&gt;, &lt;script&gt; 태그 등을 이용하여 표현할 수 있다.
+                </td>
+              </tr>
+              <tr>
+                <th>메타(meta)태그</th>
+                <td>
+                  서버와 웹브라우저 사이에서 주고받는 정보를 정의해주는 태그로 웹 페이지에 대한 정보를 제공하는 기능을 함</td>
+              </tr>
+              <tr>
+                <th>
+                  인코딩 방식 설정
+                </th>
+                <td>
+                   &lt;meta charset="utf-8"&gt;
+                  문서의 인코딩 방식을 설정해주는 문자셋(character set) 설정.<br>
+                  여러 나라의 언어를 컴퓨터가 해석하기 위해서는 각 문자에 맞는 인코딩 방식을 사용해야 한다. <br>&lt;meta&gt; 태그의 문자셋 속성을 이용해 인코딩 방식을 utf-8 방식으로
+                  설정하면, 한글을 비롯한 다양한 언어를 표시할 수 있다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  IE 호환성 보기 모드
+                </th>
+                <td>
+                  &lt;http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>
+                  - 인터넷 익스플로러 사용자까지 고려해야 하는 웹사이트를 제작할 경우 meta 태그를 사용해 현재 웹 문서를 최신표준모드로 해석하라고 선언.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  뷰포트 설정
+                </th>
+                <td>
+                 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                  *뷰포트(viewport)는 현재 화면에 보여지고 있는 영역, 즉 웹 페이지에서 사용자의 보이는 영역(visible area)을 말한다.<br>
+                 - 반응형 사이트 제작 시 필수로 선언되어야 함.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  검색엔진 고려하기
+                </th>
+                <td>
+                  1. 웹사이트의 키워드나 간단한 설명, 제작자 등의 정보를 지정할 수 있다. <br>
+                  2. 검색엔진에서 사이트를 검색할 때 참조하는 정보.<br>
+                  - &lt;meta name="keywords" content="HTML5, CSS3, JavaScript"&gt; (해당 문서의 키워드)<br>
+                  - &lt;meta name="description" content="HTML5파헤치기"&gt; (해당 문서의 설명) 일반적으로 영문 160자, 한글 80자 이내로 작성하는 것이 권장<br>
+                  - &lt;meta name="author" content="juha Lee"&gt; (해당 문서의 소유자 또는 제작자)                  
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;title&gt;
+                </th>
+                <td>
+                  HTML 문서의 제목(title)을 정의. 55~60자 이내(국문:30자 이내)로 작성하는 것을 권장<br>
+                  - 웹 브라우저의 툴바(toolbar)에 표시<br>
+                  - 웹 브라우저의 즐겨찾기(favorites)에 추가할 때 즐겨찾기의 제목<br>
+                  - 검색 엔진의 결과 페이지에 제목으로 표시됨.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;body&gt;
+                </th>
+                <td>
+                  HTML 문서의 본문 부분에 해당하며, 웹브라우저 화면에 나타나는 모든 콘텐츠는 &lt;body&gt; 태그와 &lt;/body&gt; 태그 사이에 선언해야 한다.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <div id="sub01_con3" class="sub01_con">
+        <div class="define02 mgt14">
+          <h2>Block속성과 Inline속성</h2>
+          <p>
+            HTML의 모든 요소는 해당 요소(태그)가 웹 브라우저에 어떻게 보이는가를 결정짓는 display속성을 가지고 있다.<br>
+            대부분의 HTML 요소는 이러한 display 속성값으로 크게 블록 레벨(Block Level)과 인라인 레벨(Inline Level) 두 가지 값 중의 하나를 가진다.
+          </p>
+        </div>
+        <table class="tbl_sty2">
+          <tbody>
+            <tr>
+              <th>
+                블록 레벨(Block Level) 요소
+              </th>
+              <td>
+                - 부모 요소의 가로 영역에 맞게 꽉 채워져 표현되는 요소. (width:100%)<br>
+                - 양옆으로 다른 요소가 배치되지 않게 박스를 생성하므로 박스의 위 아래로 줄 바꿈이 생기게 된다.<br>
+                - 블록 레벨 요소는 일반적인 모든 요소(블록, 인라인 레벨 등)를 포함할 수 있다.<br>
+                - display 속성값이 블록(block)인 요소는 언제나 새로운 라인(line)에서 시작하며, 해당 라인의 모든 너비를 차지한다.<br>
+                <!-- 쉽게 말해서, 블록 레벨 요소란 '화면의 가로 길이를 통째로 차지하는 요소'라고 생각하면 된다.<br> -->
+                - 블록 레벨 요소의 가로 길이는 화면의 가로 길이와 같지만, 세로 길이는 콘텐츠의 세로 길이와 동일하다.
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;">
+                p, h1~h6, ul, ol, li, dl, dt, dd, div, figure, section, header, nav, main, footer, aside, article, pre, option, optgroup, legend, 
+                blockquote, form, hr, table, fieldset, address...등
+              </td>
+            </tr>
+            <tr>
+              <th>
+                인라인 레벨(Inline Level) 요소
+              </th>
+              <td>
+                - 하나의 라인 안에서 태그에 포함된 콘텐츠의 크기만큼만 공간을 차지하는 요소.<br>
+                - 라인의 흐름을 끊지 않고 요소 앞,뒤로도 줄 바꿈이 되지 않아 다른 인라인 요소들이 자리할 수 있다.<br>
+                - 인라인 레벨 요소는 블록 레벨 요소의 자식으로 분류되기 때문에 자손으로 블록 레벨 요소를 가질 수 없다.<br>
+                즉, 인라인 레벨 요소는 블록 레벨 요소를 포함할 수 없다.<br>
+               - 한 가지 예외 경우: &lt;a&gt;는 인라인 레벨 요소지만 자손으로 블록 레벨 요소를 가질 수 있다.<br>
+                <br>
+                <p>
+                  ※유념해야할 사항
+                </p>
+                1. 상, 하단 외부 여백(margin-top, margin-bottom) 속성을 정의해도 적용되지 않는다. <br>
+                상, 하 여백은 margin이 아니라 line-height 속성에 의해 발생된다.<br>
+                2. 너비(width)와 높이(height) 속성이 적용되지 않는다. <br> (예외:img, video 태그)
+                인라인 요소의 너비 및 높이는 태그가 품고 있는 내부 요소 부피에 맞춰진다.<br>
+                인라인 속성을 가진 태그끼리 연속으로 사용되는 경우 최소한의 간격을 유지하기 위해 좌, 우에 약 4~5px 가량의 외부 여백이 자동으로 발생한다.
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;">
+                a, img, object, br, sub, sup, span, small, b ,strong, em, q, textarea, label...등
+              </td>
+            </tr>
+            <tr>
+              <th>
+                인라인 블록(Inline Block) 레벨 요소
+              </th>
+              <td>
+                블록 속성과 인라인 속성 일부를 조금씩 포함하고 있다.
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;">
+                input, select, button
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <section class="define01">
+          <strong>
+            1. 텍스트 관련 태그(1)
+          </strong>
+          <table class="tbl_sty2">
+            <tr>
+              <th>
+                제목(Heading)
+              </th>
+              <td>
+                1. HTML은 제목을 표현할 수 있는 다양한 크기의 &lt;h&gt;태그를 제공.<br>
+                2. &lt;h1&gt; ~&lt;/h6&gt; 까지 있으며 텍스트 사이즈는 숫자가 1일 때 가장 크고 6일 때 가장 작다. <br>
+                3. h태그는 제목의 표현이라는 기능 외에도 또 다른 중요한 역할을 하고 있다.<br>
+                4. 여러 검색엔진은 각 웹 사이트의 내용을 바로 이 h태그를 이용하여 키워드를 수집하고, 그 내용을 파악한다.<br>
+                따라서 HTML 문서에 포함되는 제목은 h태그로 작성해야만 검색엔진에 의해 제대로 검색될 확률을 높일 수 있다.<br>
+                5. 자식으로 블록 요소를 포함할 수 없다.
+              </td>
+            </tr>
+            <tr>
+              <th>
+                단락(Paragraph)
+              </th>
+              <td>
+                단락(문단)이란 글을 내용상 끊어서 구분한 하나하나의 토막을 뜻하는데, 이를 표시할 때는 주로 &lt;p&gt; 태그를 사용한다. 하나의 &lt;p&gt; 태그는 하나의 문단을 표시하고,
+                문단 요소는 다른 요소와의 간격을 위해 일정한 여백을 가지게 된다.<br>
+                자식으로 블록 요소를 포함할 수 없다.
+              </td>
+            </tr>
+            <tr style="display: none;">
+              <th rowspan="3">
+                인용구(Quotation)
+              </th>
+              <td>
+                HTML에서 인용구를 표현하는 방법은 다음과 같이 두 가지로 나뉜다.<br>
+                1. 짧은 인용구<br>
+                2. 블록 인용구
+              </td>
+            </tr>
+            <tr style="display: none;">
+              <td>
+                짧은 인용구: &lt;q&gt; 태그(quotation)를 사용하여 표현할 수 있으며, 자동으로 앞뒤에 큰따옴표가 붙는다.
+              </td>
+            </tr>
+            <tr style="display: none;">
+              <td>
+                블록 인용구: 길이가 긴 인용문은 &lt;blockquote&gt;태그(block quatation)를 사용하여 표현할 수 있다. &lt;blockquote&gt;태그는 이러한 인용
+                부분을 별도의 단락으로 구분하여 나타내고 태그로 표시한 텍스트는 일반적인 텍스트보다 안쪽으로 들여 써진다.
+              </td>
+            </tr>
+          </table>
+          <div class="define02 mgt14">
+            <strong class="mgb8">알아두기</strong>
+            <p>
+              HTML 코드에서 띄어쓰기나 줄 나누기를 여러 번 하더라도 웹 브라우저를 통해 나타나는 화면에는 전혀 영향을 주지 못한다.<br>
+              웹 브라우저는 여러 번의 띄어쓰기나 줄 나누기를 오직 하나의 띄어쓰기나 줄로만 인식하기 때문이다.
+            </p>
+          </div>
+          <table class="tbl_sty2">
+            <tr>
+              <th>
+                줄바꿈 (break line)
+              </th>
+              <td>
+                1. &lt;br&gt;태그를 사용하면 새로운 단락을 만들지 않고도 줄을 나눌 수 있다.<br>
+                2. &lt;br&gt;태그는 종료 태그가 없는 빈 요소 태그(empty tag)이다.
+              </td>
+            </tr>
+            <tr>
+              <th>
+                수평선 표시(horizontal rule)
+              </th>
+              <td>
+                1. 단락을 나눌 때나 내용상의 구분을 표현하고자 할 때 &lt;hr&gt;태그를 사용하여 수평 가로 구분선을 사용한다. <br>
+                2. 종료태그 없음.
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2">
+                엔티티(Entity) 코드
+              </th>
+              <td>
+                화면 상에 연속적으로 공백을 표시하고자 할 때는 스페이스 입력이 아닌 다른 방법을 사용해야 하는데, 이때 사용하는 것이 바로 '엔티티 코드'이다. 엔티티 코드란 기호 '&'로 시작해서
+                기호 ';'로 끝나는 문자의 조합을 말하는 것으로 HTML 코드 내에서 다양한 특수 문자를 나타내기 위해 사용하는 일종의 약속이다.<br><br>
+
+                주의: 엔티티(entity)의 이름은 대소문자를 구분한다.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table class="tbl_sty3" summary="">
+                  <thead>
+                    <tr class="bg">
+                      <th style="width:200px;">엔티티 문자</th>
+                      <th>엔티티 이름</th>
+                      <th>16진수 엔티티 숫자</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td style="text-align: center;">&amp;nbsp;</td>
+                      <td style="text-align: center;">&amp;#160;</td>
+                      <td style="text-align: center;">줄 바꿈 없는 공백</td>
+                    </tr>
+                    <tr>
+                      <td>&lt;</td>
+                      <td style="text-align: center;">&amp;lt;</td>
+                      <td style="text-align: center;">&amp;#60;</td>
+                      <td style="text-align: center;">보다 작은</td>
+                    </tr>
+                    <tr>
+                      <td>&gt;</td>
+                      <td style="text-align: center;">&amp;gt;</td>
+                      <td style="text-align: center;">&amp;#62;</td>
+                      <td style="text-align: center;">보다 큰</td>
+                    </tr>
+                    <tr>
+                      <td>&amp;</td>
+                      <td style="text-align: center;">&amp;amp;</td>
+                      <td style="text-align: center;">&amp;#38;</td>
+                      <td style="text-align: center;">AND 기호</td>
+                    </tr>
+                    <tr>
+                      <td>"</td>
+                      <td style="text-align: center;">&amp;quot;</td>
+                      <td style="text-align: center;">&amp;#34;</td>
+                      <td style="text-align: center;">큰따옴표</td>
+                    </tr>
+                    <tr>
+                      <td>'</td>
+                      <td style="text-align: center;">&amp;apos;</td>
+                      <td style="text-align: center;">&amp;#39;</td>
+                      <td style="text-align: center;">작은따옴표</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                &lt;pre&gt;
+              </th>
+              <td>
+                HTML 코드에서 개행이나 공백을 표시하기 위해 사용하는 별도의 방법 외에 코드에 작성된 형태 그대로를 화면에 표시해주는 태그이다.<br>
+                &lt;pre&gt;(preformatted text)는 태그 안에 작성된 텍스트를 HTML 코드에 작성된 그대로 화면에 표시하는 태그로써, 개행이나 공백 등도 모두 코드에 쓰여진 그대로
+                표시한다. 이 태그는 웹 브라우저 화면에 소스 코드를 표현할
+                때 &lt;code&gt;태그와 함께 자주 사용되는 태그이다.<br>
+              </td>
+            </tr>
+          </table>
+          <div class="define02 mgt14">
+            <strong class="mgb8">알아두기</strong>
+            <p>
+              &lt;pre&gt; 태그는 꼭 필요한 상황이 아니라면 자주 사용하지 않는 것이 좋다. &lt;pre&gt;태그가 사용된 콘텐츠를 스크린 리더기가 읽지 못하고 건너뛰기 때문에 웹 접근성
+              면에서 어긋나기 때문이다.
+            </p>
+          </div>
+        </section>
+        <section class="define01">
+          <strong>
+            2. 텍스트 관련 태그(2)
+          </strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th rowspan="2">
+                  두꺼운 텍스트 표시
+                </th>
+                <td>
+                  1. &lt;strong&gt; 태그는 사용자의 눈에 띄어야 하는 중요한 내용을 강조해서 표시하기 위해 사용하는 태그.<br>
+                  2. 이 태그 안에 포함된 텍스트는 화면 상에서 굵게 표시된다. (스크린 리더기에서 강한 억양을 사용함)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  &lt;b&gt;(bold) 단순히 화면의 텍스트를 굵게 표현
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  이탤릭체 텍스트 표시
+                </th>
+                <td>
+                  &lt;i&gt;(italic) 태그는 단순히 화면의 텍스트를 이탤릭체로 표현
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  &lt;em&gt;(emphasized) 태그는 텍스트를 이탤릭체로 변환해 줄 뿐만 아니라 그 내용이 중요하다는 의미도 함께 포함해 준다. (스크린 리더기에서 강한 억양을 사용함)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="define02 mgt14">
+            <strong class="mgb8">알아두기</strong>
+            <p>
+              검색엔진은 &lt;strong&gt;태그나 &lt;em&gt;태그를 사용하여 강조된 텍스트를 더 중요하게 인식한다.
+            </p>
+          </div>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th style="width:220px">
+                  &lt;mark&gt;
+
+                </th>
+                <td>
+                  형광펜 효과가 있는 텍스트 표시.<br>
+                  텍스트에 하이라이팅(highlighting) 효과를 적용시켜 준다. <br>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;span&gt;
+                </th>
+                <td>
+                  줄바꿈없이 영역 묶기.<br>
+                  span 태그는 태그 자체로는 아무 의미가 없지만 텍스트 단락 안에서 줄바꿈 없이 일부 텍스트만 묶어 스타일을 적용할 때 사용.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;sup&gt;,&lt;sub&gt;
+                </th>
+                <td>
+                  위첨자와 아래첨자 효과<br>
+                  위첨자는 sup(superscript)태그를 사용하여, 아래첨자는 sub(subscript)태그를 사용하여 각각 표현할 수 있다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;small&gt;
+                </th>
+                <td>
+                  부가정보처럼 작게 표시해도 되는 텍스트를 표현할 때 사용
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;s&gt;<br>
+                </th>
+                <td>
+                  취소선 태그<br>
+                  s(strikethrough)태그는 텍스트 한가운데 라인(line)을 추가하여 더 이상 정확하지 않거나 관련이 없는 텍스트를 표현할 때 사용
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;u&gt;
+                </th>
+                <td>
+                  텍스트에 밑줄이 표현된다.<br>
+                  u(Underline) 태그는 맞춤법이 틀린 단어나 중국어 고유 명사 같은 다른 기존의 텍스트와 텍스트 스타일을 정의한다.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>
+            3. 앵커 태그
+          </strong>
+          <div class="define02 mgt14">
+            <p>
+              HTML에서 Hyper Text는 링크를 의미하는 것으로, 링크는 클릭하기만 하면 다른 페이지로 쉽게 이동을 할 수 있다.<br> 앵커 태그를 이용해 다른 페이지로 이동하거나 현재 페이지
+              내에서 특정 위치로 초점을 이동시킬 수 있다.
+            </p>
+          </div>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th>
+                  &lt;a&gt;
+                </th>
+                <td>
+                  &lt;a&gt;(anchor)태그는 a태그, 앵커, 링크 등 여러 이름으로 부른다.
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  href 속성
+                </th>
+                <td>
+                  링크를 만들기 위해 &lt;a&gt;는 반드시 href(hypertext reference) 속성을 가지고 있어야 한다.<br>
+                  href 속성의 값은 링크의 목적지가 되는 주소다.<br>
+                  <pre>
+                    <code>   
+                      &lt;a href="http:naver.com">네이버&lt;/a&gt;
+                      &lt;a href="tel:123-4567-8910">123-4567-8910&lt;/a&gt;
+                      &lt;a href="sms:123-4567-8910">123-4567-8910로 문자보내기&lt;/a&gt;
+                      &lt;a href="mailto:teounyoung@naver.com">123-4567-8910로 문자보내기&lt;/a&gt;
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  웹페이지내에서 특정 아이디로 선언된 영역으로 이동.<br>
+                  #만 사용하면 현재 웹문서 맨 위로 이동.<br>
+                  html {scroll-behavior:smooth} 앵커 이동시 부드럽게 화면 이동 css
+                  <pre>
+                    <code>   
+                      &lt;a href="#">맨 위로 이동&lt;/a&gt;
+                      &lt;a href="#con1">내용1로 이동하기&lt;/a&gt;
+                   </code>
+                  </pre>
+                  <img src="../img/img13.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  target 속성
+                </th>
+                <td>
+                  target 속성은 링크된 리소스를 어디에 표시할지를 나타내는 속성이다.
+                  <br>
+                  속성값으로는 <u>_blank, _self, _parent, _top</u>이 있다.
+                  <br>
+                  1. _self는 현재 화면에 표시한다는 의미로, target 속성이 선언되지 않으면 기본적으로 self와 같이 동작.<br>
+                  2. _blank는 새로운 창에 표시한다는 의미로 외부 페이지가 나타나게 하는 속성.
+                  <br>
+                  3. _parent와 _top은 프레임이라는 특정 조건에서만 동작하는 속성으로, 요즘은 프레임을 잘 쓰지 않기 때문에 자주 사용되지는 않는다.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>
+            4. 컨테이너 태그
+          </strong>
+          <div class="define02 mgt14">
+            <p>
+              콘텐츠나 레이아웃에 아무런 영향도 주지 않고, 단지 다른 요소 여럿을 묶어 관리하기 편하게 만드는 역할을 하는 태그를 ‘컨테이너 태그’라고 한다. 컨테이너는 콘텐츠의 내용(영역)을 구분할 때
+              주로 사용된다.
+            </p>
+          </div>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th>
+                  &lt;div&gt;
+                </th>
+                <td>
+                  블록 레벨의 컨테이너 요소를 만드는 태그
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;span&gt;
+                </th>
+                <td>
+                  인라인 레벨의 컨테이너를 만드는 태그<br>
+                  블록 레벨 요소의 내부에서 콘텐츠를 영역 별로, 또는 목적 별로 구분하는 역할을 하기도 하고, CSS를 통한 스타일 적용을 위해 사용되기도 한다.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>
+            5. 이미지 관련 태그
+          </strong>
+          <div class="define02 mgt14">
+            <p>이미지 개체를 삽입할 때 사용하며 src는 필수 속성이다.</p>
+          </div>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th>
+                  &lt;img&gt;
+                </th>
+                <td>
+                  이미지 확장자 : jpg(사진), png(투명배경), gif(단순이미지, 움직이는그림),svg <br>
+                  <img src="../img/img5.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  절대경로 vs 상대경로
+                </th>
+                <td>
+                  상대경로(상대주소) : 현재 html문서의 위치를 기준으로 파일의 위치경로를 지정하는 방식. <br>
+                  작성하는 html 문서를 기준으로 같은 선상에 있는 경우에는 폴더명을 바로 작성하거나 ./로 사용할 수 있다. (images와 ./images는 같은 의미) <br>
+                  탐색기에서 html 파일을 클릭해서 보는 경우에도 문제없이 잘 보임.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <u>절대경로(절대주소) : 웹에 업로드된 이미지 파일의 경로.</u> <br>
+                  (절대경로)는 슬래시(/)로 시작한다. <br>
+                  절대 경로는 서버환경에서만 정상적으로 작동함. <br>
+                  비주얼스튜디오코드 실시간 미리보기를 하는 경우 주소표시줄을 보면 http://127.0.0.1:5500/index.html 이렇게 가상 호스트를 알아서 구성해 보여준다.<br>
+                  그래서 실시간 미리보기 상태에서는 절대 주소로 해도 경로가 문제가 없지만 탐색기에서 html 파일을 열면 서버 환경이 아닌 오프라인 상태에서 파일을 여는 것이기 때문에 파일 경로를
+                  인식하지 못해서 이미지 및 css 적용 등이 제대로 작동하지 않는다. 경로가 맞지 않는 이미지의 경우 엑박이 뜬다. <br>
+                  (*엑박: 사람들이 인터넷 사이트에 접속했지만 해당
+                  웹사이트에 게재되어 있는 이미지가 정상적으로 화면에 업로드 되지 않아서 생기는 x 표시를 말함.)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  둘 중에 무엇을 써야 하나?
+                </th>
+                <td>
+                  현실적으로 html 파일을 탐색기에서 열기 위한 목적이 아니고 온라인에서 보여주는 게 목적인 경우가 대부분이라 상대경로를 사용하는 경우가 드물다. <br>
+
+                  절대주소로 하는 대표적인 장점은 html 파일의 위치를 기준으로 상대적으로 정해지는 경로가 아닌 절대적인 경로이기 때문에 이미지가 포함된 html 위치가 변경되어도 이미지 및 링크가
+                  어긋나지 않는다는 것이다. <br>그에 반해 상대주소로 한 경우 이미지가 포함된 html 위치가 변경되면 이미지 경로도 그것에 맞게 일일이 바꿔주어야 하는 불편함이 있다.
+                  <br><br>
+                  *개발자와 html을 공유해야 하는 경우는 html, css, js, 이미지 등 모든 링크되는 파일들은 되도록이면 절대 주소로 사용하고 그렇지 않은 경우는 상대주소로 해도 무방함.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <img src="../img/img6.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  대체 텍스트 추가하기 (alt 속성)
+                </th>
+                <td>
+                  img 태그의 alt 속성은 이미지의 대체 텍스트를 입력하는 속성이다.<br> 대체 텍스트란 이미지가 아직 로드되지 않았거나 이미지 로드에 실패한 경우 이미지를 대신해 표시될 텍스트를
+                  말한다.  (필수 속성임.)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  말풍선 효과 (title 속성)
+                </th>
+                <td>
+                  title : 이미지의 제목 역할, 이미지 위에 마우스를 올리면 설명이 뜨는 말풍선 효과를 지님, 필수속성은 아님.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  이미지 설명글
+                </th>
+                <td>
+                  HTML5이전에는 이미지에 자막(설명글)을 추가하기 위해 img 태그와 별개의 텍스트 태그를 사용해서 구현하였는데 HTML5에서는 이미지를 비롯해 오디오, 비디오 등의 독립적인
+                  콘텐츠에 자막을 추가해 표시할 수 있는 &lt;figure&gt;와 &lt;figcaption&gt; 태그가 추가되었다.<br> 자막을 담당하는 &lt;figcaption&gt;
+                  태그와 콘텐츠(이미지)태그가 &lt;figure&gt; 태그에 포함되는 방식으로 사용된다.
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  &lt;figure&gt; & &lt;figcaption&gt;
+                </th>
+                <td>
+                  이미지, 오디오, 비디오 등의 독립적인 콘텐츠에 자막을 추가해 표시할 수 있는 태그
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/img7.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  &lt;picture&gt;
+                </th>
+                <td>
+                  &lt;picture&gt; 태그 또한 이미지 소스를 감싸는 역할을 한다. 그리고 그 안에는 여러 개의 &lt;source&gt;태그를 사용해 화면 크기 별로 사용할 수 있는 여러
+                  개의 이미지를 포함시킬 수 있다.<br>
+                  &lt;picture&gt; 태그는 HTML5에 추가된 태그이므로 오래된 브라우저에서 사용이 불가한 경우가 발생할 수 있기 때문에 태그 내부에 &lt;source&gt;가 아닌
+                  &lt;img&gt; 태그를 추가해 준다.<br> 그렇게 하면 오래된 브라우저는 &lt;picture&gt; 와 &lt;source&gt;를 무시하고 &lt;img&gt;
+                  태그에 작성된 내용을 토대로 이미지를 표시해준다.<br>
+                  모든 &lt;source&gt;의 media 조건이 맞지 않을 때에도 브라우저는 &lt;img&gt; 태그의 내용을 토대로 이미지를 표시할 수 있기에 &lt;picture&gt;
+                  태그에는 항상 &lt;img&gt; 태그를 하나씩 추가해 주는 것이 좋다.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/img8.png" alt=""><br>
+                  하나의 &lt;picture&gt; 태그의 안에 세 개의 &lt;source&gt; 태그를 포함하면, 결과가 렌더링되는 화면의 크기에 따라 세 이미지 중 하나의 이미지 만이 선택되어
+                  화면에 표시된다.<br>
+                  &lt;source&gt; 태그의 media 속성은 화면 크기에 대한 조건을 지정할 수 있는 속성으로, 여기에 쓰인 max-width(min-width)란 '최대 크기(최소 크기)'를
+                  의미한다.<br>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  이미지맵
+                </th>
+                <td>
+                  HTML에서는 &lt;map&gt;태그를 이용하여 이미지 맵(image map)을 제작할 수 있다.<br>
+                  이미지 맵(image map)이란 이미지의 일부를 클릭할 수 있도록 만들어서 버튼처럼 사용하는 기능을 의미한다.<br>
+                  이미지의 일부분에 링크를 연결. 이미지에 usemap속성으로 이름선언. 각각의 영역선언 area에서 링크영역지정<br>
+                  &lt;map&gt;태그는 하나 이상의 &lt;area&gt;태그를 가지며, 이 &lt;area&gt;태그가 바로 버튼과 같은 역할을 한다.
+                  <img src="../img/img12.png" alt="">
+
+                  <a href="http://maschek.hu/imagemap/imgmap/" target="_blank">
+                    http://maschek.hu/imagemap/imgmap/ 이미지맵 좌표값 구하기</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>6. 영상, 오디오 입력 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th>
+                  &lt;audio&gt;
+                </th>
+                <td>
+                  오디오를 표시하는 태그.<br>
+                  &lt;audio&gt; 태그는 다음 속성들과 함께 사용할 수 있다. 속성값을 지정하지 않고 속성명만 기입하는 방식으로 사용할 수 있는 '불리언(boolean) 속성'이 주로
+                  사용된다.<br>
+                  <small>*불리언 속성은 해당 속성을 명시하지 않으면 속성값이 자동으로 false 값을 가지게 되며, 명시하면 자동으로 true 값을 가지게 됨.</small><br><br>
+                  HTML5 오디오 파일 형식: HTML5 표준이 공식적으로 지원하는 오디오 파일 형식은 MP3, Wav, Ogg <br>
+
+                  - MP3 : Moving Picture Experts Group에 의해 개발되었으며, MPEG-1의 오디오 규격으로 개발된 손실 압축형 파일 형식.<br>
+                  - WAV(웨이브) : IBM과 Microsoft에 의해 개발되었으며, 개인용 PC에서 오디오를 재생하기 위한 IBM과 Microsoft의 표준 오디오 파일 형식.<br>
+                  - Ogg(오그) : Xiph(자이프) 재단에 의해 개발되었으며, MP3의 대안으로 개발된 특허권으로 보호되지 않는 개방형 공개 멀티미디어 파일 형식.
+                  <br>
+                  <br>
+                  <h4>HTML5 audio 요소</h4>
+                  <table class="tbl_sty2">
+                    <thead>
+                      <tr>
+                        <th>요소</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>audio</td>
+                        <td>오디오와 음악 등의 오디오 파일을 명시함.<br>
+                          <img src="../img/img17.png" alt="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>source</td>
+                        <td>
+                          <p>audio 요소의 원본 파일에 대한 파일 형식 및 파일주소를 여러 개 명시함.</p>
+                          <p>웹 브라우저는 위쪽에서부터 순서대로 가장 먼저 인식되는 파일형식과 파일주소를 사용함.</p>
+                          <img src="../img/img18.png" alt="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>type</td>
+                        <td>웹 브라우저가 해당 오디오 파일을 재생할 수 있는지 확인하도록 오디오 파일의 유형을 명시.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+                  <h4>HTML5 audio 속성</h4>
+                  <table class="tbl_sty2">
+                    <thead>
+                      <tr>
+                        <th>속성</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>src</td>
+                        <td>오디오 파일의 경로를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>controls</td>
+                        <td>
+                          <p>오디오의 기본적인 동작을 조절할 수 있는 패널를 명시함.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>autoplay</td>
+                        <td>오디오의 자동 재생 여부를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>loop</td>
+                        <td>오디오의 반복 재생 여부를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>preload</td>
+                        <td>페이지가 로드될 때 오디오 파일이 같이 로드되어야 하는지 여부와 그 방법을 명시한다.<br> 단 autoplay 속성이 적용되어있으면 preload 속성은 적용되지
+                          않는다.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;video&gt;
+                </th>
+                <td>
+                  비디오를 표시하는 방법.<br>
+                  HTML5 표준이 공식적으로 지원하는 비디오 파일 형식은 MP4, WebM, OGV. <br><br>
+
+                  - MP4 : Moving Picture Experts Group에 의해 개발되었으며, 비디오 코덱으로는 H.268, 오디오 코덱으로는 ACC를 사용한다. 적은 용량으로도 고품질의
+                  영상 및 음성을 구현할 수 있어 인터넷을 통한 스트리밍에 많이 활용되는 파일 형식.<br>
+
+                  - WebM : 구글의 지원으로 개발된 개방형 공개 멀티미디어 파일 형식이며, 비디오 코덱으로는 VP8, 오디오 코덱으로는 Vorbis를 사용한다.<br>
+
+                  - OGV : Theora(테오라) Ogg라고도 불리며, Xiph 재단에 의해 MP3의 대안으로 개발된 특허권으로 보호되지 않는 개방형 공개 멀티미디어 파일 형식. 비디오 코덱으로는
+                  Theora, 오디오 코덱으로는 Vorbis를 사용한다.
+                  <br>
+                  <br>
+                  <h4>HTML5 video 요소</h4>
+                  <table class="tbl_sty2">
+                    <thead>
+                      <tr>
+                        <th>요소</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>video</td>
+                        <td>비디오와 영화 등 비디오 파일을 명시함.<br>
+                          <img src="../img/img19.png" alt="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>source</td>
+                        <td>
+                          <p>video 요소의 원본 파일에 대한 파일 형식 및 파일 주소를 여러 개 명시함.</p>
+                          <p>웹 브라우저는 위쪽에서부터 순서대로 가장 먼저 인식되는 파일&nbsp;형식과 파일&nbsp;주소를 사용함.</p>
+                        </td>
+                      </tr>
+                      <!--tr>
+                        <td>track</td>
+                        <td>비디오 플레이어에 대한 텍스트 자막을 명시함.</td>
+                      </tr-->
+                    </tbody>
+                  </table>
+                  <br>
+                  <h4>HTML5 video 속성</h4>
+                  <table class="tbl_sty2">
+                    <thead>
+                      <tr>
+                        <th>속성</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>src</td>
+                        <td>비디오 파일의 경로를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>height</td>
+                        <td>
+                          <p>비디오 파일의 높이를 명시함.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>width</td>
+                        <td>비디오 파일의 너비를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>controls</td>
+                        <td>비디오의 기본적인 동작을 조절할 수 있는 패널를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>autoplay</td>
+                        <td>비디오의 자동 재생 여부를 명시함.(muted와 함께 선언)<br> 앱의 경우 안드로이드에서는 muted와 함께 선언되어야 하고 ios에서는 playsinline까지 선언되어야 함.</td>
+                      </tr>
+                      <tr>
+                        <td>loop</td>
+                        <td>비디오의 반복 재생 여부를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>muted</td>
+                        <td>비디오는 재생하지만 소리는 음소거.</td>
+                      </tr>
+                      <tr>
+                        <td>poster</td>
+                        <td>비디오가 아직 준비 중일때 불러올 이미지 파일의 경로를 명시함.</td>
+                      </tr>
+                      <tr>
+                        <td>preload</td>
+                        <td>비디오를 재생하기 전에 파일의 내용을 모두 불러올지를 명시함.
+                          페이지가 로딩될 때 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>playsinline</td>
+                        <td>전체화면 전환 없이 바로 재생. iOS 환경에서 발생하는 문제를 해결하기 위함.<br>
+                          아이폰에서 재생 시 비디오는 전체화면 모드로 전환되어 재생이 되는데 이 속성을 추가하면 바로 재생이 가능함.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>7. iframe 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  iframe이란 inline frame의 약자.<br>
+                  iframe 요소를 이용하면 해당 웹 페이지 안에 어떠한 제한 없이 또 다른 하나의 웹 페이지를 삽입할 수 있다.<br>
+                  &lt;iframe&gt;의 src 속성에는 삽입하고자 하는 웹문서의 URL을 입력 한다. width, height 값 적용 가능 <br>
+                  allowfullscreen 속성은 iframe 영역에 대해서 전체회면을 허용할 것인지에 대한 선언임.
+                  <img src="../img/img16.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  1. 유투브 영상 삽입<br>
+                  2. 지도 넣기 (구글)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>8. 목록 태그</strong>
+          <div class="define02 mgt14">
+            <p>목록(list)이란, 연관 있는 항목들을 정돈된 형태로 나열한 것을 말한다.<br>
+              HTML에서 목록을 나타내는 태그로는 &lt;ul&gt; &lt;ol&gt; &lt;dl&gt;이 있다.<br>
+              각각 '순서 없는 목록'과 '순서 있는 목록', '정의형 목록'을 나타낸다.</p>
+          </div>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <th>
+                  &lt;ul&gt; &lt;li&gt;
+                </th>
+                <td>
+                  1. 비순서형 목록 리스트(unordered list). 불릿 기호가 목록앞에 표시됨<br>
+                  2. 순서가 없는 리스트는 &lt;ul&gt;태그로 시작하며, 여기에 포함되는 각각의 리스트 요소는 &lt;li&gt; (list item)태그로 시작한다.<br>
+                  3. 각각의 리스트 요소 앞에는 기본 마커(marker)로 검정색의 작은 원(bullet)이 위치함.<br>
+                  <br>
+                  CSS의 list-style-type 속성을 사용하면 리스트 요소 앞에 위치하는 마커(marker)를 다른 모양으로 변경할 수 있다.<br>
+                  - disc : 검정색 작은 원 모양 (기본설정)<br>
+                  - circle : 검은 테두리의 작은 원 모양<br>
+                  - square : 사각형 모양<br>
+                  <img src="../img/img10.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;ol&gt; &lt;li&gt;
+                </th>
+                <td>
+                  1. 순서형 목록리스트(ordered list). 순서형식을 아라비아숫자, 로마자, 알파벳으로 표시한다.<br>
+                  2. 순서가 있는 리스트는 &lt;ol&gt;태그로 시작하며, 여기에 포함되는 각각의 리스트 요소는 &lt;li&gt; 태그로 시작한다.<br>
+                  3. 각각의 리스트 요소 앞에는 기본 마커로 아라비아 숫자가 위치함.<br>
+                  CSS의 list-style-type 속성을 사용하면 리스트 요소 앞에 위치하는 마커(marker)를 다른 모양으로 변경할 수 있다.<br><br>
+                  - decimal : 숫자 (기본설정)<br>
+                  - upper-alpha : 영문 대문자<br>
+                  - lower-alpha : 영문 소문자<br>
+                  - upper-roman : 로마 숫자 대문자<br>
+                  - lower-roman : 로마 숫자 소문자<br>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  ul태그와 ol태그는 모두 동일한 리스트 항목 태그인 li를 사용한다.
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;
+                </th>
+                <td>
+                  정의 리스트(Definition List)는 용어와 그에 대한 정의를 모아놓은 리스트로 &lt;dl&gt;태그로 시작한다.<br>
+                  &lt;dt&gt;태그(Definition Term)에는 정의할 용어의 이름(제목)이 들어가고, &lt;dd&gt;태그(Definition Description)에는 해당 용어에 대한
+                  정의(설명)가 들어간다.<br>
+                  <img src="../img/img11.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  dt, dd는 dl없이 단독으로 사용될 수 없으며 하나이상의 dt와 하나 이상의 dd가 무조건 사용되어야 한다.
+                  (여러 개의 dt와 하나의 dd, 하나의 dt와 여러 개의 dd 가능)
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>9. 테이블 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  테이블(Table)이란 여러 종류의 데이터(data)를 보기 좋게 정리하여 보여주는 표를 의미.
+                  표 요소는 구조상 행(row)과 열(column)로 이루어져 있고, 행과 열이 만나는 지점인 셀(cell)이 하나의 항목을 나타내는 역할을 한다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;table&gt;
+                </th>
+                <td>
+                  하나의 표를 나타내는 태그
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;tr&gt;
+                </th>
+                <td>
+                  표 안에서 하나의 행을 나타내는 태그
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;th&gt;
+                </th>
+                <td>
+                  행 안에서 제목에 해당하는 셀을 나타내는 태그
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;td&gt;
+                </th>
+                <td>
+                  행 안에서 항목에 해당하는 셀을 나태는 태그
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <img src="../img/img14.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;caption&gt;
+                </th>
+                <td>
+                  &lt;caption&gt; 태그는 &lt;table&gt; 태그의 안 쪽에서 제목 또는 표에 대한 설명을 나타내는 역할을 한다.<br> 이 태그의 콘텐츠는 표의 길이를 기준으로
+                  가운데 정렬이 된다.<br> &lt;caption&gt; 태그의 안에 다른 태그를 포함해 제목이나 설명글을 꾸며줄 수 있다.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <img src="../img/img15.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;thead&gt;,&lt;tbody&gt;,&lt;tfoot&gt;
+                </th>
+                <td>
+                  표 구조 정의하기.<br>
+                  1.&lt;thead&gt; : 표의 제목 부분<br>
+                  2.&lt;tbody&gt; : 표의 본문 부분<br>
+                  3.&lt;tfoot&gt; : 표의 요약 부분
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;rowspan&gt;
+                </th>
+                <td>
+                  &lt;td&gt;태그에서 가로행 병합
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;colspan&gt;
+                </th>
+                <td>
+                  &lt;td&gt;태그에서 세로열 병합
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;colgroup&gt;
+                </th>
+                <td>
+                  표의 열을 묶는 그룹을 정의한다. <br>
+                  <img src="../img/img20.png" alt=">" </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>10.form 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  웹 이용자가 입력 요소에 입력한 값들을 서버로 전송해주는 역할을 하는 '폼 요소(양식)'를 만드는 태그. <br>
+                  form 요소를 사용하여 사용자로부터 데이터를 입력 받을 수 있고 사용자가 입력한 데이터를 서버로 보낼 때에도 form 요소를 사용한다.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <img src="../img/img21.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  action 속성
+                </th>
+                <td>
+                  action 속성은 입력받은 데이터를 처리할 서버의 프로그램을 지정한다.<br>
+                  서버프로그램으로는 CGI, PHP, ASP 등이 있다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  method 속성
+                </th>
+                <td>
+                  입력받은 데이터를 서버에 전달할 방식을 명시.<br>
+                  method 속성을 통해 명시할 수 있는 form 요소의 전달 방식은 GET 방식과 POST 방식으로 나눠진다.<br>
+
+                  1. GET 방식은 주소에 데이터(data)를 추가하여 전달하는 방식.<br>
+                  데이터가 주소 입력창에 그대로 나타나며, 전송할 수 있는 데이터의 크기 또한 제한적이다.<br>
+                  검색 엔진의 쿼리(query)와 같이 크기가 작고 중요도가 낮은 정보를 보낼 때 주로 사용한다.<br><br>
+
+                  2. POST 방식은 데이터(data)를 별도로 첨부하여 전달하는 방식입.<br>
+                  데이터가 외부에 드러나지 않으며, 전송할 수 있는 데이터의 크기 또한 제한이 없다.<br>
+                  로그인, 회원가입처럼 보안이 중요한 경우에 주로 사용한다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  name 속성
+                </th>
+                <td>
+                  하나의 웹 문서안에 여러 개의 폼이 있을 수 있으므로 폼을 식별하기 위해 폼의 이름을 지정할 수 있다.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  요약하면, 사용자가 form 요소를 통해 입력한 데이터는 action 속성에 명시된 위치로 method 속성의 방식을 통해 전달된다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  fieldset, legend 태그
+                </th>
+                <td>
+                  관련된 입력 양식들을 그룹화할 때 사용 (폼 요소를 그룹으로 묶을 때 사용함.)<br>
+                  fieldset 태그는 하나의 그룹으로 묶은 요소들 주변으로 박스 모양의 선을 그려줌.<br>
+                  legend태그는 fieldset 태그의 제목을 정의할 때 사용함. (fieldset 태그 내에서 사용되야 함.)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>11. input 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  &lt;input&gt; 태그는 웹 페이지 이용자로부터 입력을 받기 위해 사용하는 태그 중 가장 대표적인 태그</td>
+              </tr>
+              <tr>
+                <th>
+                  type 속성
+                </th>
+                <td>
+                  &lt;input&gt; 태그의 기본 형태는 텍스트를 입력할 수 있는 대화형 필드이지만, &lt;input&gt; 태그의 type 속성을 활용하면 보다 다양한 형태의 입력 요소를 만들
+                  수 있다.</td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  type의 종류
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  type="text"
+                </th>
+                <td>
+                  text 유형은 한 줄 짜리 일반 텍스트를 입력할 수 있는 유형. <br>&lt;input&gt; 요소의 기본 유형으로, 따로 type 속성을 지정하지 않은 경우에도 사용할 수 있는
+                  유형이다. <br>주로 아이디, 이름, 주소, 전화번호 등 단순한 텍스트를 입력할 때 사용.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="password"
+                </th>
+                <td>
+                  사용자로부터 비밀번호를 입력받을 수 있다.<br>
+                  비밀번호를 입력받기 때문에 화면에는 입력받은 문자나 숫자 대신 별표나 작은 원 모양이 표시된다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="radio"
+                </th>
+                <td>
+                  사용자로부터 여러 개의 옵션(option) 중에서 단 하나의 옵션만을 입력받을 수 있다.<br>
+                  서버로 정확한 입력을 전송하기 위해서는 반드시 모든 input 요소의 name 속성이 같아야 한다.<br>
+                  checked 속성을 이용하여 여러 개의 옵션 중에서 처음에 미리 선택되는 옵션을 지정할 수 있다.<br>
+                  다중선택이 불가능함.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="checkbox"
+                </th>
+                <td>
+                  사용자로부터 여러 개의 옵션 중에서 다수의 옵션을 입력받을 수 있다.(다중선택 가능)<br>
+                  서버로 정확한 입력을 전송하기 위해서는 반드시 모든 input 요소의 name 속성이 같아야 한다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="submit"
+                </th>
+                <td>
+                  전송버튼<br>
+                  value 속성으로 버튼에 표시되는 텍스트를 지정함.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="reset"
+                </th>
+                <td>
+                  초기화 버튼<br>
+                  value 속성으로 버튼에 표시되는 텍스트를 지정함.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="button"
+                </th>
+                <td>
+                  버튼<br>
+                  value 속성으로 버튼에 표시되는 텍스트를 지정함.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="image"
+                </th>
+                <td>
+                  이미지 버튼<br>
+                  alt 속성 반드시 지정해야 함.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="file"
+                </th>
+                <td>
+                  사용자로부터 파일을 전송받을 수 있다.<br>
+                  서버로 정확한 입력을 전송하기 위해서는 반드시 모든 input 요소의 name 속성이 같아야 한다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="email"
+                </th>
+                <td>
+                  사용자가 email 주소를 입력할 수 있도록 해줌.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="url"
+                </th>
+                <td>
+                  사용자가 URL 주소를 입력할 수 있도록 해줌.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="tel"
+                </th>
+                <td>
+                  사용자가 전화번호 입력할 수 있도록 해줌.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="search"
+                </th>
+                <td>
+                  사용자가 검색어를 입력할 수 있다. <br>
+                  일반 text 타입과 다른 점은 입력 필드에 검색어를 입력하면, 입력 필드 우측에 입력된 검색어를 바로 삭제할 수 있는 엑스(X) 표시가 생김.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="number"
+                </th>
+                <td>
+                  숫자를 입력받을 때 사용한다.<br>
+                  입력 필드에 직접 숫자를 입력하거나 증감 버튼을 클릭해 숫자를 선택할 수도 있다. <br>
+                  min과 max를 사용해 수치의 최소값과 최대값을 각각 지정할 수 있다.<br>
+                  value값을 통해 초기값을 설정할 수 있음. (특별한 경우를 제외하고 대부분의 input type에 value속성 사용 가능)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="range"
+                </th>
+                <td>
+                  사용자가 일정 범위 안의 값만을 입력할 수 있도록 해줌. <br>
+                  값을 선택하기 위한 수평바(슬라이드 막대)로 표현된다.<br>
+                  min과 max를 사용해 수치의 최소값과 최대값을 각각 지정할 수 있다. <br>
+                  <img src="../img/img22.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="color"
+                </th>
+                <td>
+                  사용자가 색상을 입력할 수 있도록 해줌. <br>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="date"
+                </th>
+                <td>
+                  사용자가 날짜를 입력할 수 있도록 해줌. <br> min과 max를 사용해 날짜 선택에 제한값을 설정할 수도 있다. <br>
+                  <img src="../img/img23.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="time"
+                </th>
+                <td>
+                  사용자가 시간을 입력할 수 있도록 해줌.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="datetime-local"
+                </th>
+                <td>
+                  사용자가 날짜와 시간을 입력할 수 있도록 해줌.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="month"
+                </th>
+                <td>
+                  사용자가 연도와 월을 입력할 수 있도록 해줌.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  type="week"
+                </th>
+                <td>
+                  사용자가 연도와 몇 번째 주인지를 입력할 수 있도록 해줌.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>12. 주요 입력 속성</strong>
+          <table class="tbl_sty2">
+            <thead>
+              <th>속성명</th>
+              <th>설명</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  placeholder
+                </th>
+                <td>
+                  사용자에게 입력하는 값의 양식에 대한 힌트를 제공해주는 속성 (주로 input, textarea태그에 사용) <br>
+                  placeholder 속성이 제대로 동작하는 input 요소의 type 속성값은 다음과 같습니다.<br>
+                  - email, password, search, tel, text, url
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  required
+                </th>
+                <td>
+                  필수 필드 지정하기<br>
+                  required 속성이 적용된 입력 요소에 내용이 비어있을 경우 경고 메시지를 표시해 주는 속성.
+                  필수적으로 입력해야 하는 내용에 속성 지정하면 됨.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  autocomplete (form 태그 속성으로 한번에 선언가능)
+                </th>
+                <td>
+                  자동완성기능 (autocomplete="on or off") : on 이 기본값<br>
+                  on으로 설정하면 사용자가 이전에 입력했던 값들을 기반으로 사용자가 입력한 값과 비슷한 값들을 드롭다운 옵션으로 보여준다. <br>
+                  autocomplete 속성이 제대로 동작하는 input 요소의 type 속성값: color, datepickers, email, password, range, search, tel,
+                  text
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  autofocus
+                </th>
+                <td>
+                  입력 커서 표시하기.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  readonly
+                </th>
+                <td>
+                  읽기 전용 속성으로 입력창의 내용을 변경할 수 없게끔 읽기 전용으로 만들 때 사용함. <br>
+                  input/textarea 태그에서 사용 가능
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  disabled
+                </th>
+                <td>
+                  해당 input 요소가 비활성화됨을 명시
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>13. label 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  폼 요소에 레이블을 붙이기 위한 용도로 사용함.<br>
+                  폼 요소와 레이블 텍스트가 서로 연결되어 있다는 것을 알 수 있음. (조건:입력요소 id값과 label for값 일치해야 함)
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  적용방법
+                </th>
+                <td>
+                  label 태그 안에 입력 요소를 포함시키는 방식 <br><br>
+                  <img src="../img/img24.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  입력 요소의 id를 기반으로 label 태그와 입력 요소를 짝을 지어주는 방식 <br><br>
+                  <img src="../img/img25.png" alt="">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>14. select 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  &lt;select&gt; 태그는 여러 가지 항목 중 원하는 항목을 선택할 수 있도록 '드롭다운 메뉴'를 제공하는 태그.<br>
+                  옵션들을 묶는 역할을 하는 태그<br>
+                  *드롭다운 메뉴란, 요소를 클릭했을 때 선택 가능한 항목들이 아래로 펼쳐지는 메뉴를 말한다.<br> &lt;select&gt; 태그는 드롭다운 메뉴의 개별 항목을 나타내는 &lt;option&gt; 태그와 함께 사용한다. <br>
+                  option태그는 항목들을 표시하는 태그.
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  select 태그에 사용되는 속성
+                </th>
+                <td>
+                  1. size : 화면에 표시될 메뉴 항목의 개수를 지정
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2. multiple : 여러 개의 항목을 함께 선택할 수 있도록 한다. 브라우저에 여러 개의 옵션이 함께 표시되면서 <kbd>ctrl</kbd>키를 누른 상태로 드롭다운 메뉴에 있는
+                  여러 항목을 선택할 수 있다. 선택 후 전송버튼을 클릭하면 서버로 전송됨.
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  option 태그에 사용되는 속성
+                </th>
+                <td>
+                  1. value : 옵션을 선택했을 때 서버로 넘겨질 값을 지정. (외부 링크를 걸 때 value값에 url입력)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2. selected : 화면에 표시 될 때 기본으로 선택되어 있는 옵션을 지정.(하나의 항목에만 지정)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  &lt;optgroup&gt;
+                </th>
+                <td>
+                  드롭다운 메뉴에서 여러 항목들을 (몇 가지) 그룹으로 묶어야 할 경우에 사용함.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>15. textarea 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  사용자가 여러 줄의 텍스트를 입력할 수 있는 텍스트 입력 영역을 정의할 때 사용
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2">
+                  textarea 태그에 사용되는 속성
+                </th>
+                <td>
+                  1. cols : 텍스트 영역의 가로 너비를 지정. 이때 수치는 문자의 개수를 기준으로 한다.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2. rows : 텍스트 영역의 세로 너비를 지정. 기준은 cols와 동일하게 문자의 개수.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>16. button 태그</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  버튼을 만들 때 사용함.
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="3">
+                  button 태그에 사용되는 type 속성
+                </th>
+                <td>
+                  1. submit : 폼을 서버로 전송하기 (기본값)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2. reset : 폼에 입력한 모든 내용을 초기화 시킴.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  3. button : 버튼 형태만 만들 뿐 자체 기능은 없음. (다른 동작을 하려면 따로 함수를 연결해야 함)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="define01">
+          <strong>17. 시맨틱 태그(Semantic Tag)</strong>
+          <table class="tbl_sty2">
+            <tbody>
+              <tr>
+                <td colspan="2" style="padding: 10px;">
+                  시맨틱 태그란 '의미론적인 태그'라는 뜻. <br>
+                  태그 이름만으로도 해당 태그가 문서에서 어떤 역할을 하는지 쉽게 파악할 수 있는 태그를 가르킴.
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  문서 구조를 위한 시맨틱 태그
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  header
+                </th>
+                <td>
+                  웹 페이지에 대한 대표적인 설명글 또는 머릿말 등을 나타낼 때 사용하는 태그. (header, footer태그 포함 안됨)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  nav
+                </th>
+                <td>
+                  네비게이션 역할을 하는 메뉴 링크들의 영역에 사용. <br>
+                  사이트의 메뉴를 표시할 때 가장 많이 사용하는 태그임.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  main
+                </th>
+                <td>
+                  페이지의 메인 콘텐츠(main content)를 나타낼 때 사용.(하나의 문서에 한 번만 사용) <br>
+                  article, aside, footer, header, nav 요소의 자손 요소가 되어서는 안 된다.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  aside
+                </th>
+                <td>
+                  본문 이외의 내용 표시할 때 주로 사용. <br>
+                  웹 페이지의 왼쪽이나 오른쪽, 혹은 하단에 사이드바로 표현됨.(주로 본문 옆에 간단하게 표시되는 사이드바를 만들거나 광고 배너 등을 포함하는 데 사용)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  section
+                </th>
+                <td>
+                  여러 가지 콘텐츠들을 그룹으로 묶어주는 역할의 태그 <br>
+                  연관된 콘텐츠를 묶어 영역을 구분하는 데 사용하는 태그로 div 태그는 내부에 포함된 요소들에 대해 아무런 정보도 나타내지 않지만, section 태그는 관련된 콘텐츠가 묶여 있음을
+                  명시적으로 나타내는 태그.<br> 제목태그 포함 권장
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  article
+                </th>
+                <td>
+                  독립적으로 사용할 수 있는 연관 콘텐츠를 구분할 때 사용하는 태그. <br> 제목태그 포함 권장
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  footer
+                </th>
+                <td>
+                  일반적으로 웹 문서 끝자락에 들어가는 태그로 페이지를 만든 사람, 저작권 정보, 연관 링크 등을 표시하는 역할의 태그.<br> (header, footer태그 포함 안됨)
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  address
+                </th>
+                <td>
+                  문서나 글의 저자 또는 회사와 연락할 수 있는 정보를 명시할 때 사용.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <img src="../img/layout.jpg" alt="">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="footer_inner">
+        <span>Lee JUHA Education Site.</span>
+        <span>Copyright JUHA all rights reserved.
+        </span>
+      </div>
+    </footer>
+    <div class="btn_top">
+      맨 위로
+    </div>
+  </div>
+  <script>
+    $(function () {
+      $(".tab_menu li").click(function () {
+        $(".tab_menu li").removeClass("active");
+        $(this).addClass("active");
+        const sub_con = $(this).data('title');
+        $(".sub01_con").hide();
+        $('#' + sub_con).show();
+      });
+        
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('.btn_top').fadeIn();
+        } else {
+          $('.btn_top').fadeOut();
+        }
+      });
+      $('.btn_top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 400);
+        return false;
+      });
+    })
+    // $(function () {
+    //   $('#header').load('../inc/header.html');
+    //   $('#footer').load('../inc/footer.html');
+    // });
+  </script>  
+</body>
+
+</html>
