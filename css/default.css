@@ -106,6 +106,7 @@ html {
 }
 
 body {
+  overflow-x:hidden;
   min-height: 800px;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
@@ -702,4 +703,5 @@ figure.img_area figcaption {
 .depth_define small{
   font-size: 1.6rem; 
   color:#666
+
 }
