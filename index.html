@@ -19,22 +19,12 @@
 또 다른 브라우저는 "icon"에서 실행됩니다.(현재는 icon이 표준)
 "shortcut icon"과 "icon" 둘 중 하나만 있어도 가능한 브라우저도 있음.-->
 <script src="./js/jquery-3.6.3.min.js"></script>
-<script src="./js/main.js"></script>
 <script src="./js/jquery.easeScroll.js"></script>
 </head>
 <body>
   <div id="wrap">
     <!--마우스커서변경-->
     <div id="cursor"></div>
-    <script>
-      let mouseCursor = document.getElementById("cursor");//지정된 ID와 일치하거나 일치하는 요소를 문서에서 발견해서 반환
-      //let: 변수 재할당 해야 하는 경우에 그게 아니라면 대부분 const
-      document.addEventListener("mousemove", cursor);
-      function cursor(e) {
-        mouseCursor.style.top = e.pageY + document.body.scrollTop + "px"; //스크롤시에 페이지의 상단의 위치값을 반환하거나 부여한다.
-        mouseCursor.style.left = e.pageX + document.body.scrollLeft + "px";//스크롤시에 페이지의 좌측의 위치값을 반환하거나 부여한다.
-      }
-    </script>
     <header id="header">
       <div class="logo">
         JUHA, HTML5 + CSS3 Web Standards
@@ -312,7 +302,8 @@
         </span>
       </div>
     </footer>
-  </div>
+  </div> 
+<script src="./js/main.js"></script> 
 </body>
 
 </html>
