@@ -633,28 +633,28 @@
       <div id="sub02_con2" class="sub01_con">
         <ul class="depth_tab type2">
           <li>
-            <a href="#property1">폰트</a>
+            <a href="#property1">font</a>
           </li>
           <li>
-            <a href="#property2">웹 폰트</a>
+            <a href="#property2">web font</a>
           </li>
           <li>
-            <a href="#property3">텍스트 관련</a>
+            <a href="#property3">text</a>
           </li>
           <li>
-            <a href="#property4">배경</a>
+            <a href="#property4">background</a>
           </li>
           <li>
-            <a href="#property5">테두리</a>
+            <a href="#property5">border</a>
           </li>
           <li>
             <a href="#property6">table</a>
           </li>
           <li>
-            <a href="#property7">목록관련</a>
+            <a href="#property7">ul,ol,li</a>
           </li>
           <li>
-            <a href="#property8">박스모델</a>
+            <a href="#property8">box</a>
           </li>
           <li>
             <a href="#property9">width&height</a>
@@ -663,7 +663,7 @@
             <a href="#property10">overflow</a>
           </li>
           <li>
-            <a href="#property11">여백관련</a>
+            <a href="#property11">margin,padding</a>
           </li>
           <li>
             <a href="#property12">box-shadow</a>
@@ -681,19 +681,26 @@
             <a href="#property16">position</a>
           </li>
           <li>
-            <a href="#property17">transform</a>
+            <a href="#property17">visibility</a>
           </li>
           <li>
-            <a href="#property18">transition</a>
+            <a href="#property18">transform</a>
           </li>
           <li>
-            <a href="#property19">animation</a>
+            <a href="#property19">transition</a>
           </li>
           <li>
-            <a href="#property20">미디어쿼리</a>
+            <a href="#property20">object-fit</a>
           </li>
           <li>
-            <a href="#property21">밴더프리픽스</a>
+          <li>
+            <a href="#property21">animation</a>
+          </li>
+
+            <a href="#property22">mediaQuery</a>
+          </li>
+          <li>
+            <a href="#property23">밴더프리픽스</a>
           </li>
         </ul>
         <section id="property1" class="define01">
@@ -1854,7 +1861,7 @@
         </section>
         <section id="property5" class="define01">
           <strong>
-            4. 테두리(border)와 관련된 속성
+            5-1. 테두리(border)와 관련된 속성
           </strong>
           <table class="tbl_sty2">
             <tr>
@@ -1996,7 +2003,7 @@
         </section>
         <section class="define01">
           <strong>
-            5. 둥근 테두리(border-radius)
+            5-2. 둥근 테두리(border-radius)
           </strong>
           <table class="tbl_sty2">
             <tr>
@@ -4081,44 +4088,7 @@
           </div>  
         </section>
         <section id="property15" class="define01">
-          <strong>15. visibility</strong>
-          <div class="define02 mgt14">
-            <p>
-              - 웹 페이지에 표시 여부를 지정하는 속성<br>
-              - 기본값 visible
-            </p>
-          </div>
-          <table class="tbl_sty2">
-            <thead>
-              <tr>
-                <th>
-                  속성값
-                </th>
-                <th>
-                  설명
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  visible
-                </th>
-                <td>화면에 표시됨.</td>
-              </tr>
-              <tr>
-                <th>hidden</th>
-                <td>화면에 표시되지 않음(공간은 차지함)</td>
-              </tr>
-              <tr>
-                <th>collapse</th>
-                <td>셀 간의 경계를 무시하고 숨김(테이블 관련 요소에만 적용 가능)</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="property16" class="define01">
-          <strong>16. float</strong>
+          <strong>15. float</strong>
           <div class="define02 mgt14">
             <p>
               - 요소를 문서 위에 떠 있게 만듦<br>
@@ -4201,9 +4171,9 @@
           <p class="ex_sty">
             <img src="../img/img39.png" alt="">
           </p>
-        </section>
-        <section id="property17" class="define01">
-          <strong>17. position</strong>
+        </section>        
+        <section id="property16" class="define01">
+          <strong>16. position</strong>
           <div class="define02 mgt14">
             <p>
               - 요소의 위치를 어떤 방식으로 결정할 것인지를 지정하는 속성
@@ -4330,14 +4300,12 @@
               - 순서는 양수나 음수 모두 설정할 수 있으며, 크기가 클수록 앞쪽에 위치하고 작을수록 뒤쪽에 위치하게 됨.
             </p>
           </div>
-        </section>        
-        <section id="property18" class="define01">
-          <strong>
-            18-1. object-fit 속성
-          </strong>
+        </section> <section id="property16" class="define01">
+          <strong>16. visibility</strong>
           <div class="define02 mgt14">
             <p>
-              요소의 크기에 맞게 img태그와 video태그의 크기를 조정하는 방법으로 사용되는 속성
+              - 웹 페이지에 표시 여부를 지정하는 속성<br>
+              - 기본값 visible
             </p>
           </div>
           <table class="tbl_sty2">
@@ -4354,57 +4322,27 @@
             <tbody>
               <tr>
                 <th>
-                  fill
+                  visible
                 </th>
-                <td>
-                  - 기본값 <br>
-                  - 부모요소의 지정된 너비와 높이에 따라 요소를 가득 채울수 있는 크기로 변화되면서 비율은 유지되지 않는다. (background-size:100% 100% 느낌과 유사)
-                  
-                </td>
+                <td>화면에 표시됨.</td>
               </tr>
               <tr>
-                <th>contain</th>
-                <td>
-                  - 요소의 가로나 세로 크기에 가능한 딱 맞춰져 크기가 조정되고, 비율은 유지된 상태. <br>
-                  - 남는 공간이 발생
-                </td>
+                <th>hidden</th>
+                <td>화면에 표시되지 않음(공간은 차지함)</td>
               </tr>
               <tr>
-                <th>cover</th>
-                <td>
-                  - 요소의 가로나 세로 크기에 맞춰져 꽉 채워지며 비율은 유지된 상태. (지정된 너비와 높이를 가득 채울 때까지 확대 및 축소됨)<br>
-                  - 잘리는 영역이 발생
-                </td>
-              </tr>
-              <tr>
-                <th>none</th>
-                <td>
-                  - 크기가 조정되지 않고 원본사이즈로 처리되며 크면 잘리고, 작으면 남음. <br>
-                 <!-- - 원본의 크기에 가운데 정렬된 형태-->
-                </td>
-              </tr>
-              <tr>
-                <th>scale-down</th>
-                <td>
-                  - 크기가 아무것도 지정되지 않거나 혹은 contain이 지정되어 있는 것처럼 변경됨. <br>
-                  - none과 contain 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택 <br>
-                  - 원본 크기보다 작아지는 결과를 보여줌.
-                </td>
+                <th>collapse</th>
+                <td>셀 간의 경계를 무시하고 숨김(테이블 관련 요소에만 적용 가능)</td>
               </tr>
             </tbody>
           </table>
-        </section>       
-        <section id="property18" class="define01">
-          <strong>
-            18-2. object-position 속성
-          </strong>
+        </section>    
+        <section id="property17" class="define01">
+          <strong>17. visibility</strong>
           <div class="define02 mgt14">
             <p>
-              - object-position 속성은 img, video와 같은 대체 요소의 콘텐츠를 요소에 배치할 위치를 조절<br>
-              - object-fit을 적용하면 기본적으로 요소의 가운데로 이미지(영상)를 이동시킨다. <br>
-              - 기본값은 50%, 50% <br>
-              - 숫자형 px, em, % 등이 사용되며, 키워드 top, left, right, bottom이 사용될 수 있다.<br>
-              - 상속됨
+              - 웹 페이지에 표시 여부를 지정하는 속성<br>
+              - 기본값 visible
             </p>
           </div>
           <table class="tbl_sty2">
@@ -4421,46 +4359,21 @@
             <tbody>
               <tr>
                 <th>
-                  fill
+                  visible
                 </th>
-                <td>
-                  - 기본값 <br>
-                  - 부모요소의 지정된 너비와 높이에 따라 요소를 가득 채울수 있는 크기로 변화되면서 비율은 유지되지 않는다. (background-size:100% 100% 느낌과 유사)
-                  
-                </td>
+                <td>화면에 표시됨.</td>
               </tr>
               <tr>
-                <th>contain</th>
-                <td>
-                  - 요소의 가로나 세로 크기에 가능한 딱 맞춰져 크기가 조정되고, 비율은 유지된 상태. <br>
-                  - 남는 공간이 발생
-                </td>
+                <th>hidden</th>
+                <td>화면에 표시되지 않음(공간은 차지함)<br>-뎁스2 메뉴에 opacity 사용 시 커서 이벤트 막을 때 자주 사용(pointer-event:none)역할</td>
               </tr>
               <tr>
-                <th>cover</th>
-                <td>
-                  - 요소의 가로나 세로 크기에 맞춰져 꽉 채워지며 비율은 유지된 상태. (지정된 너비와 높이를 가득 채울 때까지 확대 및 축소됨)<br>
-                  - 잘리는 영역이 발생
-                </td>
-              </tr>
-              <tr>
-                <th>none</th>
-                <td>
-                  - 크기가 조정되지 않고 원본사이즈로 처리되며 크면 잘리고, 작으면 남음. <br>
-                 <!-- - 원본의 크기에 가운데 정렬된 형태-->
-                </td>
-              </tr>
-              <tr>
-                <th>scale-down</th>
-                <td>
-                  - 크기가 아무것도 지정되지 않거나 혹은 contain이 지정되어 있는 것처럼 변경됨. <br>
-                  - none과 contain 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택 <br>
-                  - 원본 크기보다 작아지는 결과를 보여줌.
-                </td>
+                <th>collapse</th>
+                <td>셀 간의 경계를 무시하고 숨김(테이블 관련 요소에만 적용 가능)</td>
               </tr>
             </tbody>
           </table>
-        </section>
+        </section>   
         <section id="property18" class="define01">
           <strong>18. transform</strong>
           <div class="define02 mgt14">
@@ -4691,7 +4604,137 @@
           </table>
         </section>
         <section id="property20" class="define01">
-          <strong>20. animation</strong>
+          <strong>
+            20-1. object-fit 속성
+          </strong>
+          <div class="define02 mgt14">
+            <p>
+              요소의 크기에 맞게 img태그와 video태그의 크기를 조정하는 방법으로 사용되는 속성
+            </p>
+          </div>
+          <table class="tbl_sty2">
+            <thead>
+              <tr>
+                <th>
+                  속성값
+                </th>
+                <th>
+                  설명
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  fill
+                </th>
+                <td>
+                  - 기본값 <br>
+                  - 부모요소의 지정된 너비와 높이에 따라 요소를 가득 채울수 있는 크기로 변화되면서 비율은 유지되지 않는다. (background-size:100% 100% 느낌과 유사)
+                  
+                </td>
+              </tr>
+              <tr>
+                <th>contain</th>
+                <td>
+                  - 요소의 가로나 세로 크기에 가능한 딱 맞춰져 크기가 조정되고, 비율은 유지된 상태. <br>
+                  - 남는 공간이 발생
+                </td>
+              </tr>
+              <tr>
+                <th>cover</th>
+                <td>
+                  - 요소의 가로나 세로 크기에 맞춰져 꽉 채워지며 비율은 유지된 상태. (지정된 너비와 높이를 가득 채울 때까지 확대 및 축소됨)<br>
+                  - 잘리는 영역이 발생
+                </td>
+              </tr>
+              <tr>
+                <th>none</th>
+                <td>
+                  - 크기가 조정되지 않고 원본사이즈로 처리되며 크면 잘리고, 작으면 남음. <br>
+                 <!-- - 원본의 크기에 가운데 정렬된 형태-->
+                </td>
+              </tr>
+              <tr>
+                <th>scale-down</th>
+                <td>
+                  - 크기가 아무것도 지정되지 않거나 혹은 contain이 지정되어 있는 것처럼 변경됨. <br>
+                  - none과 contain 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택 <br>
+                  - 원본 크기보다 작아지는 결과를 보여줌.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>       
+        <section id="property18" class="define01">
+          <strong>
+            20-2. object-position 속성
+          </strong>
+          <div class="define02 mgt14">
+            <p>
+              - object-position 속성은 img, video와 같은 대체 요소의 콘텐츠를 요소에 배치할 위치를 조절<br>
+              - object-fit을 적용하면 기본적으로 요소의 가운데로 이미지(영상)를 이동시킨다. <br>
+              - 기본값은 50%, 50% <br>
+              - 숫자형 px, em, % 등이 사용되며, 키워드 top, left, right, bottom이 사용될 수 있다.<br>
+              - 상속됨
+            </p>
+          </div>
+          <table class="tbl_sty2">
+            <thead>
+              <tr>
+                <th>
+                  속성값
+                </th>
+                <th>
+                  설명
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  fill
+                </th>
+                <td>
+                  - 기본값 <br>
+                  - 부모요소의 지정된 너비와 높이에 따라 요소를 가득 채울수 있는 크기로 변화되면서 비율은 유지되지 않는다. (background-size:100% 100% 느낌과 유사)
+                  
+                </td>
+              </tr>
+              <tr>
+                <th>contain</th>
+                <td>
+                  - 요소의 가로나 세로 크기에 가능한 딱 맞춰져 크기가 조정되고, 비율은 유지된 상태. <br>
+                  - 남는 공간이 발생
+                </td>
+              </tr>
+              <tr>
+                <th>cover</th>
+                <td>
+                  - 요소의 가로나 세로 크기에 맞춰져 꽉 채워지며 비율은 유지된 상태. (지정된 너비와 높이를 가득 채울 때까지 확대 및 축소됨)<br>
+                  - 잘리는 영역이 발생
+                </td>
+              </tr>
+              <tr>
+                <th>none</th>
+                <td>
+                  - 크기가 조정되지 않고 원본사이즈로 처리되며 크면 잘리고, 작으면 남음. <br>
+                 <!-- - 원본의 크기에 가운데 정렬된 형태-->
+                </td>
+              </tr>
+              <tr>
+                <th>scale-down</th>
+                <td>
+                  - 크기가 아무것도 지정되지 않거나 혹은 contain이 지정되어 있는 것처럼 변경됨. <br>
+                  - none과 contain 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택 <br>
+                  - 원본 크기보다 작아지는 결과를 보여줌.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="property21" class="define01">
+          <strong>21. animation</strong>
           <div class="define02 mgt14">
             <p>
               - 엘리먼트에 적용되는 CSS 스타일을 다른 CSS 스타일로 부드럽게 전환시킬 때 사용.<br>
@@ -4982,8 +5025,8 @@
             예를 들어 다음처럼 2개의 키프레임 애니메이션을 동시에 적용하면
           </div>
         </section>
-        <section id="property21" class="define01">
-          <strong>21. 미디어쿼리</strong>
+        <section id="property22" class="define01">
+          <strong>22. 미디어쿼리</strong>
           <div class="define02 mgt14">
             <p>
               - css3 모듈 중 하나.
@@ -5105,8 +5148,8 @@
             <a href="https://www.krds.go.kr/html/site/style/style_05.html" target="_blank">Breakpoint(분기점) 선정</a>
           </div>
         </section>        
-        <section id="property22" class="define01">
-          <strong>22. 밴더프리픽스</strong>
+        <section id="property23" class="define01">
+          <strong>23. 밴더프리픽스</strong>
           <div class="define02 mgt14">
             <p>
               - 브라우저 공급자 접두사.<br>
@@ -5204,6 +5247,7 @@
 
 
 </html>
+
 
 
 
