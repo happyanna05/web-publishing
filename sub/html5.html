@@ -411,6 +411,47 @@
                        &lt;meta property="og:description" content="웹퍼블리싱 공부하기"&gt;
                     </div>   
                 </td>
+              </tr>
+              <tr>
+                <th>iOS 사파리 브라우저 - 숫자 자동 전화번호인식 방지</th>
+                <td>
+                  <p>전화기능 태그를 적용하지 않았음에도 숫자를 자동으로 전화번호로 인식하여 전화걸기 실행하는 것을 방지하기 위함.<br>
+                   &lt;a href="tel:..."&gt;링크로 감지해버림.</p>
+                  &lt;meta name="format-detection" content="telephone=no"&gt;<!-- 사파리 전화번호 인식 차단 -->
+                </td>
+              </tr>
+              <tr>
+                <th>그 외의 대표적인 상황</th>
+                <td>
+                  이메일 주소: 자동으로 메일 앱 실행 링크 생성<br>
+                  주소: 지도 앱으로 연결
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>목적</th>
+                        <th>사용</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>전화번호 링크 방지</td>
+                        <td><code>&lt;meta name="format-detection" content="telephone=no"&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td>이메일 링크 방지</td>
+                        <td><code>&lt;meta name="format-detection" content="email=no"&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td>주소 자동 링크 방지</td>
+                        <td><code>&lt;meta name="format-detection" content="address=no"&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><code>&lt;meta name="format-detection" content="telephone=no, address=no""&gt;</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>                
+              </tr>
               <tr>
                 <th>
                   &lt;title&gt;
@@ -1999,5 +2040,6 @@
 
 
 </html>
+
 
 
