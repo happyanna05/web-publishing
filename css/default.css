@@ -517,12 +517,14 @@ p.img_area {
 .depth_tab.type2 {
   flex-wrap: wrap;
   justify-content: flex-start;
+  border-right: 0;
+  border-left: 1px solid #232323;
 }
 .depth_tab li {
   flex-grow: 1;
   height: 64px;
   padding: 20px 0;
-  border-left: 1px solid #3d3232;
+  border-left: 1px solid #232323;
   border-bottom: 1px solid #232323;
   font-size: 1.6rem;
   font-weight: 500;
@@ -530,6 +532,9 @@ p.img_area {
   cursor: pointer;
 }
 .depth_tab.type2 li {
+  flex-grow:0;
+  border-left:0;
+  border-right:1px solid #232323;
   width:calc(100%/5);
 }
 .depth_tab.type2 li:last-child{
@@ -705,3 +710,4 @@ figure.img_area figcaption {
   color:#666
 
 }
+
